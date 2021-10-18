@@ -1,0 +1,15 @@
+{
+  "name": "ts-shared",
+  "version": "1.0.0",
+  "description": "ts shared",
+  "homepage": "build",
+  "main": "index.js",
+  "repository": "https://github.com/project-sicario/",
+  "author": "SpetsnazSicaario",
+  "scripts": {
+    "build": "webpack --mode production",
+    "watch": "webpack --mode development --watch true"
+  },
+  "license": "MIT",
+  "private": false
+}
