@@ -5,4 +5,6 @@ node_modules/
 yarn-error.log
 yarn.lock
 cache/
-server.*
+creds.cfg
+creds.cfg.bkp
+server.cfg.bkp
