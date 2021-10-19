@@ -1,0 +1,131 @@
+$sidebar-width: 80px;
+$sidebar-height: 100%;
+$navigation-height: 40px;
+$navigation-width: calc(100% - $sidebar-width);
+
+$main-color: rgb(32, 37, 42);
+$secondary-color: #23ACFF;
+
+.adminmenu-container {
+  background: $main-color;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  width: 600px;
+  height: 800px;
+  margin: auto;
+  position: absolute;
+  top: 7.5vh;
+  left: 0;
+  right: 0;
+  color: rgb(230, 230, 230);
+  border: 3px $secondary-color solid;
+  .sidebar {
+    background: $main-color;
+    float: left;
+    height: $sidebar-height;
+    width: calc($sidebar-width - 3px);
+    border-right: 3px $secondary-color solid;
+    
+    .options {
+      .sidebarButton {
+        border-radius: 0;
+        height: 40px;
+        width: 100%;
+        border: none;
+        background: none;
+        font-size: 10px;
+        color: rgb(230, 230, 230);
+        transition: 0.2s;
+        &:hover {
+          color: white;
+          background: rgb(52, 60, 68);
+          cursor: pointer;
+        }
+        &:active {
+          color: white;
+          background: rgb(0, 128, 255);
+        }
+      }
+    }
+    .exit {
+      bottom: 100px
+    }
+  }
+
+  .navigation {
+    background: $main-color;
+    height: calc($navigation-height - 3px);
+    width: calc(100% - $sidebar-width);
+    float: right;
+    border-bottom: 3px $secondary-color solid;
+    .options {
+      display: inline;
+      button {
+        height: 100%;
+        width: 100px;
+        border: none;
+        border-radius: 0;
+        font-size: 12px;
+        background: none;
+        color: rgb(230, 230, 230);
+        transition: 0.2s;
+        &:hover {
+          color: white;
+          background: rgb(52, 60, 68);
+          cursor: pointer;
+        }
+        &:active {
+          color: white;
+          background: rgb(0, 128, 255);
+        }
+      }
+    }
+  }
+
+  .content {
+    width: calc(100% - $sidebar-width);
+    height: 100%;
+    max-height: calc(100% - $navigation-height);
+    float: right;
+    background: $main-color;
+    overflow-y: scroll;
+    .options {
+      margin: 10px 10px;
+    }
+    input {
+      height: 30px;
+      border-radius: 3px;
+      border: none;
+      background-color: rgba(0, 0, 0, 0);
+      border-bottom: 2px $secondary-color solid;
+      outline: none;
+      text-align: center;
+      color: white;
+      margin: 5px;
+      transition: 0.3s;
+      &::placeholder{
+        color: rgb(200, 200, 200);
+      }
+      &:hover {
+        border-bottom: 2px #1e8ed4 solid;
+      }
+      &:focus {
+        border-bottom: 2px #ffffff solid;
+      }
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 128, 255, 0.404);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(50, 50, 50);
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(63, 63, 63);
+  }
+}

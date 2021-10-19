@@ -1,0 +1,36 @@
+{
+  "name": "ps-adminmenu",
+  "version": "1.0.0",
+  "description": "ps adminmenu - its in the name",
+  "homepage": "build",
+  "main": "index.js",
+  "repository": "https://github.com/project-sicario/",
+  "author": "SpetsnazSicaario",
+  "scripts": {
+    "build": "webpack --mode production && craco build",
+    "buildcfx": "webpack --mode production",
+    "buildnui": "craco build",
+    "watchcfx": "webpack --mode development --watch true",
+    "watchnui": "craco start"
+  },
+  "license": "MIT",
+  "private": false,
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

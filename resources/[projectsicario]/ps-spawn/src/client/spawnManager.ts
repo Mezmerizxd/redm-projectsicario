@@ -1,16 +1,6 @@
 import GameManager from "../../../ts-shared/src/client/managers/game-manager";
+import NuiManager from "../../../ts-shared/src/client/managers/nui-manager";
 import Config from "../shared/config";
-
-//  let num = 0;
-//  const tick = setTick(async () => 
-//  {
-//    await gameManager.Delay(1000);
-//    console.log(num);
-//    if (num == 5){
-//      clearTick(tick);
-//    }
-//    num = num + 1;
-//  })
 
 class SpawnManager {
   protected static instance: SpawnManager;
@@ -23,9 +13,13 @@ class SpawnManager {
   }
 
   private gameManager = GameManager.getInstance();
+  private nuiManager = NuiManager.getInstance();
 
+  public Nui(toggle: boolean){
+    this.nuiManager.DisplayNui("nui-spawn", toggle);
+  }
 
-  public handleSpawn() {
+  public HandleSpawn() {
     while (true) {
       this.gameManager.Delay(0);
       if (NetworkIsSessionStarted()) {
@@ -34,11 +28,6 @@ class SpawnManager {
         return;
       }
     }
-  }
-
-  public Nui(toggle: boolean){
-    SetNuiFocus(toggle, toggle);
-    SendNuiMessage(JSON.stringify({action: "nui-spawn", data: toggle}));
   }
 
   public SpawnPed(cData: any) {

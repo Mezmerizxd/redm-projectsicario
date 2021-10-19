@@ -8,8 +8,9 @@ class NuiManager {
     return NuiManager.instance;
   }
 
-  Nui(nuiName: string, display: boolean){
-
+  DisplayNui(nuiName: string, toggle: boolean){
+    SetNuiFocus(toggle, toggle);
+    SendNuiMessage(JSON.stringify({action: nuiName, data: toggle}));
   }
 }
 

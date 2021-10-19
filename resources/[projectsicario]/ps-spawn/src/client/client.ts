@@ -1,13 +1,11 @@
-import GameManager from "../../../ts-shared/src/client/managers/game-manager";
 import Config from "../shared/config";
 import SpawnManager from "./spawnManager";
 
 const cfg = Config.getInstance();
 const spawnManager = SpawnManager.getInstance();
-const gameManager = GameManager.getInstance();
 
 setImmediate(() => { 
-  spawnManager.handleSpawn();
+  spawnManager.HandleSpawn();
   setTimeout(() => {
     spawnManager.Nui(true);
   }, 1000);
