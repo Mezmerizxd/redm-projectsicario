@@ -1,5 +1,5 @@
 import Config from "../shared/config";
-import SpawnManager from "./spawnManager";
+import SpawnManager from "../../../ts-shared/src/client/managers/spawn-manager";
 
 const cfg = Config.getInstance();
 const spawnManager = SpawnManager.getInstance();

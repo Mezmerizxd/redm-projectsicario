@@ -1,6 +1,6 @@
-import GameManager from "../../../ts-shared/src/client/managers/game-manager";
-import NuiManager from "../../../ts-shared/src/client/managers/nui-manager";
-import Config from "../shared/config";
+import GameManager from "./game-manager";
+import NuiManager from "./nui-manager";
+import Config from "../../../../ps-spawn/src/shared/config";
 
 class SpawnManager {
   protected static instance: SpawnManager;
