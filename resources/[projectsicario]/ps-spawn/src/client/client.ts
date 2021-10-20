@@ -7,12 +7,12 @@ const spawnManager = SpawnManager.getInstance();
 const playerManager = PlayerManager.getInstance();
 
 setImmediate(() => { 
+  spawnManager.HandleSpawn();
   setTimeout(() => {
     //if (playerManager.isReady == true)
     spawnManager.Nui(true);
       return;
   }, 1000);
-  spawnManager.HandleSpawn();
 })
 
 RegisterNuiCallbackType("ps-spawn:ts:GetSpawnLocations")
