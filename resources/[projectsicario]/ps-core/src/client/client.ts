@@ -5,10 +5,6 @@ setImmediate(() => {
   }, 1000);
 })
 
-RegisterCommand("sql", () => {
-  emitNet("ps-core:Login");
-}, false);
-
 const FixWorld = () => {
   Citizen.invokeNative("0x59767C5A7A9AE6DA", -37875204);
   Citizen.invokeNative("0x59767C5A7A9AE6DA", 258104717);

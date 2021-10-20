@@ -10,8 +10,8 @@ class PlayerManager {
 
   isReady = false;
 
+  Citizen = null;
   CitizenId = null;
-  Cid = null;
   Steam = null;
   License = null;
 
