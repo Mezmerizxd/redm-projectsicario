@@ -1,4 +1,15 @@
 setImmediate(() => {
+  FixWorld();
+  setTimeout(() => {
+    emitNet("ps-core:Login");
+  }, 1000);
+})
+
+RegisterCommand("sql", () => {
+  emitNet("ps-core:Login");
+}, false);
+
+const FixWorld = () => {
   Citizen.invokeNative("0x59767C5A7A9AE6DA", -37875204);
   Citizen.invokeNative("0x59767C5A7A9AE6DA", 258104717);
   Citizen.invokeNative("0x59767C5A7A9AE6DA", -76700394);
@@ -48,4 +59,4 @@ setImmediate(() => {
   Citizen.invokeNative("0x59767C5A7A9AE6DA", -761186147);
   Citizen.invokeNative("0x59767C5A7A9AE6DA", -1872939092);
   Citizen.invokeNative("0x59767C5A7A9AE6DA", -964156415)
-})
+}

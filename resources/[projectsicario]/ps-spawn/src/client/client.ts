@@ -1,14 +1,18 @@
 import Config from "../shared/config";
 import SpawnManager from "../../../ts-shared/src/client/managers/spawn-manager";
+import PlayerManager from "../../../ts-shared/src/client/managers/player-manager";
 
 const cfg = Config.getInstance();
 const spawnManager = SpawnManager.getInstance();
+const playerManager = PlayerManager.getInstance();
 
 setImmediate(() => { 
-  spawnManager.HandleSpawn();
   setTimeout(() => {
+    //if (playerManager.isReady == true)
     spawnManager.Nui(true);
+      return;
   }, 1000);
+  spawnManager.HandleSpawn();
 })
 
 RegisterNuiCallbackType("ps-spawn:ts:GetSpawnLocations")
