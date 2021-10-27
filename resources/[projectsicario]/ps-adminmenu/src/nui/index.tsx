@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import Draggable from 'react-draggable';
 
-import {useNuiEvent} from "../boilerplate/useNuiEvent";
-import {fetchNui} from "../boilerplate/fetchNui";
-import { debugData } from '../boilerplate/debugData';
+import {useNuiEvent, fetchNui, debugData} from "./nui";
 
 import Navigation from './Navigation';
 import Sidebar from './Sidebar';

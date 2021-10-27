@@ -61,10 +61,10 @@ for (let i = 0; i < 5; i++) {
   console.log(retval);
 }
 // Returns
-steam:110000131ff6d05
-license:459786813c6f63fde7db23d0d86c73a96e3128fa
-xbl:2535413336218120
-live:1759218635568883
-license2:459786813c6f63fde7db23d0d86c73a96e3128fa
-ip:172.30.32.1
+steam:111111111111111
+license:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+xbl:1111111111111111
+live:1111111111111111
+license2:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+ip:8.8.8.8
 ```

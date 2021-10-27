@@ -1,8 +1,6 @@
 import Button from '@mui/material/Button';
 
-import {useNuiEvent} from "../boilerplate/useNuiEvent";
-import {fetchNui} from "../boilerplate/fetchNui";
-import { debugData } from '../boilerplate/debugData';
+import {debugData, useNuiEvent, fetchNui} from "./nui";
 
 import "./Spawns.scss";
 import { useState } from 'react';

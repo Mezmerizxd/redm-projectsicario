@@ -10,14 +10,9 @@ const gameManager = GameManager.getInstance();
 
 setImmediate(async () => { 
   await gameManager.Delay(5000);
-
-  while (true) {
-    if (playerManager.isReady){
-      spawnManager.HandleSpawn();
-      spawnManager.Nui(true);
-    }
-    await gameManager.Delay(100);
-  }
+  spawnManager.HandleSpawn();
+  spawnManager.Nui(true);
+  await gameManager.Delay(100);
 })
 
 RegisterNuiCallbackType("ps-spawn:ts:GetSpawnLocations")
