@@ -1,3 +1,6 @@
+import PlayerManager from "../../../ts-shared/src/client/managers/player-manager";
+import GameManager from "../../../ts-shared/src/client/managers/game-manager";
+
 setImmediate(() => {
   FixWorld();
   setTimeout(() => {

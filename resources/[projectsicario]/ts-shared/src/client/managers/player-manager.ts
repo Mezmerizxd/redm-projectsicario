@@ -8,16 +8,16 @@ class PlayerManager {
     return PlayerManager.instance;
   };
 
-  isReady = false;
+  isReady;
 
-  Citizen = null;
-  CitizenId = null;
-  Steam = null;
-  License = null;
+  Citizen;
+  CitizenId;
+  Steam;
+  License;
 
-  Money = null;
-  MetaData = null;
-  CharacterData = null;
+  Money;
+  MetaData;
+  CharacterMeta;
 }
 
 export default PlayerManager;

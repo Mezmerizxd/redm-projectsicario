@@ -38,8 +38,8 @@ class SpawnManager {
       SetEntityCoords(ped, cData.coords.x, cData.coords.y, cData.coords.z, false, false, false, true);
       FreezeEntityPosition(ped, false);
       SetEntityAlpha(ped, 255, 0);
-      await this.gameManager.Delay(1000);
       DoScreenFadeIn(1000);
+      await this.gameManager.Delay(1000);
       clearTick(tick);
     })
   }
