@@ -1,6 +1,6 @@
 fx_version "cerulean"
 version '1.0.0'
-description "ps-spawn"
+description "ps-test"
 
 lua54 'yes'
 

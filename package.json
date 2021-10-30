@@ -5,10 +5,6 @@
   "dependencies": {
     "@citizenfx/client": "^1.0.2792-1",
     "@citizenfx/server": "^1.0.2792-1",
-    "@emotion/react": "^11.4.1",
-    "@emotion/styled": "^11.3.0",
-    "@mui/icons-material": "^5.0.1",
-    "@mui/material": "^5.0.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^12.1.10",
@@ -20,7 +16,6 @@
     "cross-env": "^7.0.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-draggable": "^4.4.4",
     "react-scripts": "4.0.3",
     "remove-files-webpack-plugin": "^1.4.3",
     "sass": "^1.42.1",
@@ -30,6 +25,6 @@
     "webpack-cli": "^3.3.12"
   },
   "scripts": {
-    "build": "cd resources/\\[projectsicario]/ && cd ps-adminmenu/ && webpack --mode production && craco build && cd .. && cd ps-core/ && webpack --mode production && craco build && cd .. && cd ps-spawn/ && webpack --mode production && craco build && cd .. && cd ts-shared/ && webpack --mode production && cd .."
+    "build": "cd resources/\\[projectsicario]/ && cd ps-spawn && webpack --mode production && cd .. && cd ps-nui && webpack --mode production && npm run buildnui && cd .."
   }
 }

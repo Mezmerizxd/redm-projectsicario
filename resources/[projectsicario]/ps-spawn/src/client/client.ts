@@ -1,27 +1,20 @@
-import Config from "../shared/config";
-import SpawnManager from "../../../ts-shared/src/client/managers/spawn-manager";
-import PlayerManager from "../../../ts-shared/src/client/managers/player-manager";
-import GameManager from "../../../ts-shared/src/client/managers/game-manager";
+import SpawnManager from "./managers/spawn-manager";
 
-const cfg = Config.getInstance();
-const spawnManager = SpawnManager.getInstance();
-const playerManager = PlayerManager.getInstance();
-const gameManager = GameManager.getInstance();
+const spawnManager = new SpawnManager;
 
-setImmediate(async () => { 
-  await gameManager.Delay(5000);
-  spawnManager.HandleSpawn();
-  spawnManager.Nui(true);
-  await gameManager.Delay(100);
-})
-
-RegisterNuiCallbackType("ps-spawn:ts:GetSpawnLocations")
-on ("__cfx_nui:ps-spawn:ts:GetSpawnLocations", (data: any, cb: any) => {
-  cb(cfg.SpawnLocations);
+setImmediate(() => {
+  setTimeout(() => {
+    spawnManager.Initialize();
+  }, 2000);
 });
 
-RegisterNuiCallbackType("ps-spawn:ts:Spawn")
-on ("__cfx_nui:ps-spawn:ts:Spawn", (data: any, cb: any) => {
-  spawnManager.SpawnPed(data);
+RegisterNuiCallbackType("SpawnPlayer")
+on ("__cfx_nui:SpawnPlayer", (data, cb) => {
+  spawnManager.SpawnPlayer(data);
   cb("ok");
+});
+
+RegisterNuiCallbackType("GetSpawnLocations")
+on ("__cfx_nui:GetSpawnLocations", (cb) => {
+  cb(spawnManager.GetSpawnLocations())
 });
