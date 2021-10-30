@@ -15,6 +15,6 @@ on ("__cfx_nui:SpawnPlayer", (data, cb) => {
 });
 
 RegisterNuiCallbackType("GetSpawnLocations")
-on ("__cfx_nui:GetSpawnLocations", (cb) => {
+on ("__cfx_nui:GetSpawnLocations", (data, cb) => {
   cb(spawnManager.GetSpawnLocations())
 });
